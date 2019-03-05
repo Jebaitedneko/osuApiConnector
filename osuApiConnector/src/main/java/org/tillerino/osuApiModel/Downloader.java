@@ -67,7 +67,7 @@ public class Downloader {
 	 */
 	@SneakyThrows(UnsupportedEncodingException.class)
 	public Downloader() {
-		String systemKey = System.getProperty("osuapikey");
+		String systemKey = System.getenv("OSU_API");
 
 		if(systemKey != null) {
 			if(!keyPattern.matcher(systemKey).matches()) {
